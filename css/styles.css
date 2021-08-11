@@ -1,11 +1,12 @@
 :root {
   --primary-text-color: #757575;
-  --secondary-text-color: #212121;
+  --secondary-text-color: rgba(255, 255, 255, 0.6);
+  --primary-title-color: #ffffff;
+  --secondary-title-color: #212121;
   --accent-color: #2196f3;
   --primary-bacground-color: #ffffff;
-  --footer-fontcolor: rgba(255, 255, 255, 0.6);
-  --secondary-background--color: #f5f4fa;
-  --third-background-color: #2f303a;
+  --secondary-background-color: #2f303a;
+  --teamcards-background-color: #f5f4fa;
 }
 /*   color of text
 #2196F3 logo accent
@@ -18,6 +19,38 @@ rgba(255, 255, 255, 0.6) footer-adress
 #2F303A hero footer
 #F5F4FA  other-section*/
 
+/* reset style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+/* end reset style */
+
 /* body */
 
 body {
@@ -27,17 +60,6 @@ body {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.03em;
-  text-decoration: none;
-}
-
-/* decoration none */
-
-.list {
-  list-style: none;
-}
-/* застосовую селектор тега <а> бо не можу прибрати підкреслювання на сторінці портфоліо, воно наслідується невідомо звідки і не зникає при прописуванні атрибуту text-decoration: none в слтилях */
-a {
-  text-decoration: none;
 }
 /* logo */
 
