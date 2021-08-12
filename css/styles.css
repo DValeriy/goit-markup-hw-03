@@ -171,23 +171,29 @@ body {
   padding-bottom: 200px;
 }
 .hero {
-  text-align: center;
+  /* text-align: center; */
   background-color: var(--secondary-background-color);
 }
+/* .div {
+  text-align: center;
+} */
 .hero-title {
   color: var(--secondary-title-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
+  padding: 5px;
   max-width: 696px;
   text-transform: uppercase;
   margin-bottom: 30px;
+  text-align: center;
+  /* навіщо маржін авто якщо це блок елемент */
   margin-left: auto;
   margin-right: auto;
 }
 .hero-button {
-  display: inline-block;
+  display: block;
   color: var(--secondary-title-color);
   background-color: var(--accent-color);
   font-weight: 700;
@@ -198,8 +204,8 @@ body {
   height: 50px;
   border-radius: 4px;
   padding: 10px 32px;
-  align-items: center;
-  /* why not work here  text-align: center; */
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-button:focus,
 .hero-button:hover {
@@ -209,18 +215,24 @@ body {
 /*   end hero  section */
 
 /*  feature section  */
+/* .feature {
+} */
 .feature-list {
   display: flex;
   align-items: start;
+  margin-top: -30px;
+  margin-left: -30px;
   /* max-width: 270px; */
 }
 .feature-list-item {
-  width: 270px;
+  flex-basis: calc((100% - 120px) / 4);
+  margin-top: 30px;
+  margin-left: 30px;
 }
 /* ширна 270 не працю!!!! */
-.feature-list-item:not(:last-child) {
-  margin-right: 30px;
-}
+/* .feature-list-item:not(:last-child) {
+  margin-right: 30px; 
+}*/
 .feature-list-title {
   color: var(--primary-title-color);
   font-weight: 700;
@@ -251,10 +263,17 @@ body {
 }
 .work-list {
   display: flex;
+  margin-top: -30px;
+  margin-left: -30px;
 }
-.work-list-item:not(last-child) {
+.work-list-item {
+  flex-basis: calc((100% - 90px) / 3);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+/* .work-list-item:not(last-child) {
   margin-right: 30px;
-}
+} */
 /*  end Work  section */
 /*   team  section */
 .team {
@@ -271,18 +290,33 @@ body {
 }
 .team-list {
   display: flex;
-}
-.team-list-item:not(last-child) {
-  margin-right: 30px;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 .team-list-item {
+  flex-basis: calc((100% - 120px) / 4);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+/* .team-list-item:not(last-child) {
+  margin-right: 30px; 
+}*/
+/* .team-list-item {
   width: 270px;
-  height: 368px;
+  height: 368px; 
   background-color: var(--primary-background-color);
+}*/
+.team-list-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: var(--primary-background-color);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team-list-img {
   display: block;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .team-list-title {
   text-align: center;
@@ -336,48 +370,53 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  margin-right: 8px;
 }
 .portfolio-list-btn-item-filter:hover,
 .portfolio-list-btn-item-filter:focus {
   color: var(--secondary-title-color);
   background-color: var(--accent-color);
 }
-.portfolio-list-btn-item:not(:last-child) {
+/* .portfolio-list-btn-item:not(:last-child) {
   margin-right: 8px;
-}
+} */
 .portfolio-list-card {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 .portfolio-list-card-item {
   background-color: var(--third-background-color);
-  width: 370px;
+  /* width: 370px; */
+  flex-basis: calc((100% - 90) / 3);
+  margin-left: 30px;
+  margin-top: 30px;
   border: 1px;
-  border-color: var(--primary-background-color);
 }
-.portfolio-list-card-item:not(:nth-child(3n)) {
+/* .portfolio-list-card-item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
 .portfolio-list-card-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+} */
+
+.portfolio-card-container {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  background: var(--primary-background-color);
 }
-.portfolio-list-card-img {
-  margin-bottom: 20px;
-}
+
 .portfolio-list-card-title {
   color: var(--primary-title-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  padding-right: 24px;
-  padding-left: 24px;
   margin-bottom: 8px;
 }
 .portfolio-list-card-descr {
   font-size: 16px;
   line-height: 1.87;
-  padding-right: 24px;
-  padding-left: 24px;
 }
 /*   end Portfolio  section */
